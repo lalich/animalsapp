@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indi Ani</title>
+</head>
+<body>
+    <h1>Thi$ $pecies</h1>
+    <main>
+        <div>
+            <article>
+                <h2><%= animal.species%> - <%=animal.extinct ? "Extinxt" : "Not Extinct" %></h2>
+                <h3><%= animal.location%></h3>
+                <h3><%= animal.lifeExpectancy</h3>
+                
+                <a href="/animal/"><button>Edit</button></a>
+                <form>
+                    <input type="submit" value="delete" />
+                </form>
+
+                <a href="/animal"><button>Back To Main</button></a>
+            </article>
+            
+
+
+        </div>
+    </main>
+</body>
+</html>
