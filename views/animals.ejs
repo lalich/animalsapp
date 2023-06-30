@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Kingdom</title>
-
+    <link rel="icon" type="image/x-icon" href="https://m.media-amazon.com/images/I/81p+NTRQ1RL._AC_SX522_.jpg">
+    <%- include("../imports.ejs") %>
 </head>
 <body>
     <h1>Welcome to the Animal Kingdom!</h1>
@@ -15,8 +16,18 @@
     <nav>
         <a href="/create">Addie Time!</a>
     </nav>
-
+<h3>This is what has been contributed so far!</h3>
     
+<ul>
+    <% animals.forEach(animal => { %>
+            <li>
+                <a href="animals/<%=animal._id %>" >
+                    <%=animal.species %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+
  
     </body>
     </html>

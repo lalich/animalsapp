@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indi Ani</title>
+    <link rel="icon" type="image/x-icon" href="https://m.media-amazon.com/images/I/81p+NTRQ1RL._AC_SX522_.jpg">
+    <%- include("../imports.ejs") %>
 </head>
 <body>
-    <h1>Thi$ $pecies</h1>
+    <h1>Thi$ $pecies i$:</h1>
     <main>
         <div>
             <article>
-                <h2><%= animal.species%> - <%=animal.extinct ? "Extinxt" : "Not Extinct" %></h2>
-                <h3><%= animal.location%></h3>
-                <h3><%= animal.lifeExpectancy</h3>
-                
-                <a href="/animal/"><button>Edit</button></a>
-                <form>
-                    <input type="submit" value="delete" />
+                <h2><%= animals.species%> & they are <%=animals.extinct ? "Extinxt" : "Not Extinct" %></h2>
+                <h3>They reside in <%= animals.location%></h3>
+                <h3>Their Life last aproximately <%= animals.lifeExpectancy%> years</h3>
+                <br/>
+                <a href="/animals/<%= animals._id %>/edit"><button>Mulligan</button></a>
+                <br/>
+                <form method="POST" action="/animals/<%= animals._id%>?_method=DELETE">
+                    <input type="submit" value="delete this PoS$pecies" />
                 </form>
 
-                <a href="/animal"><button>Back To Main</button></a>
+                <a href="/animals"><button>Back To the Kingdom</button></a>
             </article>
             
 

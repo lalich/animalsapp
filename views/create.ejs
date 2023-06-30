@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Creator lil one</title>
     <link rel="icon" type="image/x-icon" href="https://m.media-amazon.com/images/I/81p+NTRQ1RL._AC_SX522_.jpg">
+    <%- include("../imports.ejs") %>
 </head>
 <body>
     THIS IS THE WAY to PLAY GOD!
 <br/></br></br>
-    <form action="/animalkingdom" method="POST">
+    <form action="/animals" method="POST">
         What is the Species? <input type="text" name="species"/>
         <br/>
         <br/>
-        Is this Species Extinct? <input type="checkbox" name="extinct" />
+        The Species is Extinct? <input type="checkbox" name="extinct" />
         <br/></br>
         Where do you find this Species? <input type="text" name="location"/>
         <br/></br>
