@@ -56,6 +56,12 @@ app.get('/animals/:id/edit', async (req, res) => {
     res.render('edit.ejs', { animal })
 })
 
+app.put('/animals/:id', async (req, res) => {
+    req.body.extinct = req.body.extinct === 'on' ? true : false
+    await Animals.findByIdAndUpdate(req.params.id, req.body)
+    console.log(req.body, 'Hope your second swing was better!')
+    res.redirect('/animals')
+})
 
 
 // clear out database when server is shut down.. this does not clear it on crashes though.

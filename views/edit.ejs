@@ -19,7 +19,7 @@
         What is the Species? <input type="text" name="species" value="<%= animal.species %>"/>
         <br/>
         <br/>
-        The Species is Extinct? <input type="checkbox" name="extinct" <%= animal.extinct %> />
+        The Species is Extinct? <input type="checkbox" name="extinct" <%= animal.extinct ? 'checked' : '' %> />
         <br/></br>
         Where do you find this Species? <input type="text" name="location" value="<%= animal.location %>"/>
         <br/></br>
